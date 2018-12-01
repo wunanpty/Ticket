@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/db/mysql/MySQLConnection.java=UTF-8
+encoding//src/recommendation/GeoRecommendation.java=UTF-8
+encoding//src/rpc/ItemHistory.java=UTF-8
+encoding//src/rpc/SearchItem.java=UTF-8
