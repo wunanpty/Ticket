@@ -44,7 +44,7 @@ public class SearchItem extends HttpServlet {
 
 		// term can be empty
 		String term= request.getParameter("term");
-		//userId， from front end
+		//userId， from front end (for practicing git)
 		String userId = request.getParameter("user_id");
 		
 		DBConnection connection = DBConnectionFactory.getConnection();
