@@ -50,13 +50,13 @@ public class SearchItem extends HttpServlet {
 		DBConnection connection = DBConnectionFactory.getConnection();
 		try {
 			List<Item> items = connection.searchItems(lat, lon, term);
-			//userId 对应的 favoriteItemId
+			//userId -> favoriteItemId
 			Set<String> favoritedItemIds = connection.getFavoriteItemIds(userId);
 			
 			JSONArray array = new JSONArray();
 			for (Item item : items) {
 				JSONObject obj = item.toJSONObject();
-				//check favoritedItemIds set中存在，那么写true, 不存在写false
+				//check favoritedItemIds, set，那么写true, 不存在写false
 				//obj.append(): key, value: an array[]
 				//obj.put(); key, value: boolean(false, true)
 				//when front-end check: it only check the true and false.
